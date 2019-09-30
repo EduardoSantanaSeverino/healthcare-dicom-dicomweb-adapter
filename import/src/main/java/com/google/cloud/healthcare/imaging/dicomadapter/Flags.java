@@ -94,4 +94,33 @@ public class Flags {
 
   public Flags() {
   }
+
+
+  /* This ist a constructor created for
+   *  testing porpused only.
+   *  It is not intended to be used in production server. */
+  public Flags(
+          String dimseAET,
+          String dimseCmoveAET,
+          Integer dimsePort,
+          String dicomwebAddr,
+          String dicomwebStowPath,
+          String dicomwebAddress,
+          String oauthScopes,
+          String aetDictionaryPath,
+          String aetDictionaryInline,
+          String monitoringProjectId)
+  {
+    this.dimseAET = dimseAET;
+    this.dimseCmoveAET = dimseCmoveAET;
+    this.dimsePort = dimsePort;
+    this.dicomwebAddr = dicomwebAddr;
+    this.dicomwebStowPath = dicomwebStowPath;
+    this.dicomwebAddress = dicomwebAddress;
+    this.oauthScopes = oauthScopes;
+    this.verbose = true;
+    this.aetDictionaryPath = aetDictionaryPath;
+    this.aetDictionaryInline = aetDictionaryInline;
+    this.monitoringProjectId = monitoringProjectId;
+  }
 }

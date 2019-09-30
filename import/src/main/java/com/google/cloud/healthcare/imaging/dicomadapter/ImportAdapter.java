@@ -41,9 +41,17 @@ public class ImportAdapter {
   private static Logger log = LoggerFactory.getLogger(ImportAdapter.class);
 
   public static void main(String[] args) throws IOException, GeneralSecurityException {
+    boolean isDebug = false;
     Flags flags = new Flags();
-    JCommander jCommander = new JCommander(flags);
-    jCommander.parse(args);
+    if (isDebug)
+    {
+      flags = new Flags();
+    }
+    else
+    {
+      JCommander jCommander = new JCommander(flags);
+      jCommander.parse(args);
+    }
 
     // Adjust logging.
     if (flags.verbose) {
