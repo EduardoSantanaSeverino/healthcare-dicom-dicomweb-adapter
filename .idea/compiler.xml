@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="healthcare-dicom-dicomweb-adapter.dicom_util.main" target="11" />
+      <module name="healthcare-dicom-dicomweb-adapter.dicom_util.test" target="11" />
+      <module name="healthcare-dicom-dicomweb-adapter.export.main" target="11" />
+      <module name="healthcare-dicom-dicomweb-adapter.export.test" target="11" />
+      <module name="healthcare-dicom-dicomweb-adapter.import.main" target="11" />
+      <module name="healthcare-dicom-dicomweb-adapter.import.test" target="11" />
+      <module name="healthcare-dicom-dicomweb-adapter.util.main" target="11" />
+      <module name="healthcare-dicom-dicomweb-adapter.util.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

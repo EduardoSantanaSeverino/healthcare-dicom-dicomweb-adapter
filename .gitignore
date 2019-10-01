@@ -620,3 +620,5 @@ util/.project
 util/.settings/
 util/tmp/
 *.classpath
+
+!.idea/

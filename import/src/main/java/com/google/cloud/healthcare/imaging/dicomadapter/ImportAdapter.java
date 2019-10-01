@@ -45,7 +45,7 @@ public class ImportAdapter
 
     public static void main(String[] args) throws IOException, GeneralSecurityException
     {
-        boolean isDebug = false;
+        boolean isDebug = true;
         Flags flags = new Flags();
         if (isDebug)
         {
