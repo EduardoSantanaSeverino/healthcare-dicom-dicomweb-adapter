@@ -49,7 +49,17 @@ public class ImportAdapter
         Flags flags = new Flags();
         if (isDebug)
         {
-            flags = new Flags("TestDicom1","Test",5678,"","","","","","","");
+            flags = new Flags(
+                    "IMPORTADAPTER",//dimse_aet=IMPORTADAPTER, Desc: Title of DIMSE Application Entity.
+                    "", // Desc: (Optional) Separate AET used for C-STORE calls within context of C-MOVE.
+                    2579,// dimse_port=2579, Desc: Port the server is listening to for incoming DIMSE requests.
+                    "", // Desc: Address for DicomWeb service. Deprecated and used only with C-STORE. If dicomweb_address is also specified, it takes precedence.
+                    "", // Desc: Path to send StowRS requests for DicomWeb peer. This is appended to the contents of --dicomweb_addr flag. Deprecated and used only with C-STORE. If dicomweb_address is also specified, it takes precedence.
+                    "https://healthcare.googleapis.com/v1beta1/projects/${PROJECT}/locations/${LOCATION}/datasets/${DATASET}/dicomStores/${DICOMSTORE}/dicomWeb",//dicomweb_address=https://healthcare.googleapis.com/v1beta1/projects/${PROJECT}/locations/${LOCATION}/datasets/${DATASET}/dicomStores/${DICOMSTORE}/dicomWeb, Desc: Address for DicomWeb service. Must be a full path up to /dicomWeb if the Cloud Healthcare API is used.
+                    "https://www.googleapis.com/auth/cloud-platform",// oauth_scopes=https://www.googleapis.com/auth/cloud-platform, Desc: Comma seperated OAuth scopes used by adapter.
+                    "",// Desc: Path to json containing aet definitions (array containing name/host/port per element)
+                    "",// Desc: Json array containing aet definitions (name/host/port per element). Only one of aet_dictionary and aet_dictionary_inline needs to be specified.
+                    "${PROJECT}");// monitoring_project_id=${PROJECT}, Desc: Stackdriver monitoring project id, must be the same as the project id in which the adapter is running
         } else
         {
             JCommander jCommander = new JCommander(flags);
