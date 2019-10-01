@@ -17,4 +17,5 @@
 include ":export"
 include ":import"
 include ":util"
-include ':dicom_util'
+include ":dicom_util"
+include "integration_test"

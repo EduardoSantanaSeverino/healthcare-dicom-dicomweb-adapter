@@ -619,3 +619,4 @@ util/.classpath
 util/.project
 util/.settings/
 util/tmp/
+*.classpath
