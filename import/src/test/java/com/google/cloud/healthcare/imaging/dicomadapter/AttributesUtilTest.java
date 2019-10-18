@@ -199,6 +199,7 @@ public class AttributesUtilTest {
     Attributes expected = new Attributes();
     expected.setString(Tag.PatientName, VR.PN, "Yamada^Tarou=山田^太郎=やまだ^たろう");
     assertThat(attrs).isEqualTo(expected);
+
   }
 
   @Test
